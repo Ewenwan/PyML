@@ -81,7 +81,7 @@ chkBtn = Checkbutton(root, text="Model Tree", variable = chkBtnVar)# 带有勾�
 chkBtn.grid(row=3, column=0, columnspan=2)#第三行 地0列 横跨2列
 
 # 退出按钮
-Button(root, text="quit", command=root.quit()).grid(row=1, column=2)
+Button(root, text="quit", command=root.quit()).grid(row=1, column=2,columnspan=3)
 
 # 全局变量
 # 训练数据
