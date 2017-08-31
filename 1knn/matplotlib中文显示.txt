@@ -1,0 +1,64 @@
+#设置汉字格式
+    # font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=14) #window 下
+    # font = matplotlib.font_manager.FontProperties(fname="/usr/share/fonts/truetype/arphic/ukai.ttc") # linux 下 字体
+    #font = matplotlib.font_manager.FontProperties(fname="/usr/share/fonts/font_ch_wq/font_ch_wq.ttf") # linux 下 字体
+    '''
+    linux 需要配置修改 matplotlib的资源配置文件   import matplotlib   matplotlib.matplotlib_fname() 可查找位置  /etc/matplotlibrc
+ 
+# 查看 系统中文字体
+~$ python
+from matplotlib.font_manager import FontManager
+import subprocess
+fm = FontManager()
+mat_fonts = set(f.name for f in fm.ttflist)
+print mat_fonts
+output = subprocess.check_output('fc-list :lang=zh -f "%{family}\n"', shell=True)
+print '*' * 10, '系统可用的中文字体', '*' * 10
+print output
+zh_fonts = set(f.split(',', 1)[0] for f in output.split('\n'))
+available = mat_fonts & zh_fonts
+print '*' * 10, '可用的字体', '*' * 10
+for f in available:
+    print f
+
+>>> print output
+AR PL UMing CN
+AR PL UKai TW MBE
+AR PL UKai HK
+Droid Sans Fallback
+AR PL UKai CN
+AR PL UKai TW
+文泉驿等宽正黑,文泉驛等寬正黑,WenQuanYi Zen Hei Mono
+AR PL UMing HK
+AR PL UMing TW
+AR PL UMing TW MBE
+
+查看安装位置
+fc-match -v "AR PL UKai CN"           >>>  file: "/usr/share/fonts/truetype/arphic/ukai.ttc"(w)
+fc-match -v "WenQuanYi Zen Hei Mono"  >>>  file: "/usr/share/fonts/font_ch_wq/font_ch_wq.ttf"(w)
+
+    先安装 中文字体 http://font.chinaz.com/130130474870.htm
+    sudo mv  XXX.ttf   /usr/share/fonts
+    cd /usr/share/fonts
+    sudo mkdir XXX
+    sudo mv XXX.ttf XXX/
+    cd /usr/share/fonts/XXX
+    #生成字体索引信息. 会显示字体的font-family
+    sudo mkfontscale
+    sudo mkfontdir
+    #更新字体缓存：
+    fc-cache
+
+    vim /etc/matplotlibrc
+    # font.family  取消注释
+    并且在font.serif 取消注释 后 支持字体加上一个中文字体 WenQuanYi Zen Hei Mono
+    font.sans-serif  取消注释 后 支持字体加上一个中文字体 WenQuanYi Zen Hei Mono
+    修改 Ture 为False 并去掉注释 axes.unicode_minus : False
+    为matplotlib增加中文字体
+    重要 复制一份 ttf字体 到 /usr/share/matplotlib/mpl-data/fonts/ttf  下
+    sudo cp /usr/share/fonts/XXX/XXX.ttf  /usr/share/matplotlib/mpl-data/fonts/ttf
+
+    !!!!! 进入 $HOME/.cache/matplotlib  隐藏文件 Ctrl+H 可显示
+    找到文件夹下的fontList.cache文件     删除
+    遇到中文字体就会自动调用 上面添加的中文字体显示 
+    '''

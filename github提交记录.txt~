@@ -18,4 +18,5 @@ git push -u origin master # 将本地文件提交到Github
 
 git status  查看 文件修改情况
 dit add 对应文件
-
+git commit -m "add files"
+git push -u origin master # 将本地文件提交到Github
