@@ -12,7 +12,7 @@
 # 5 SVM 支持向量机 
 [SVM 支持向量机](/5svm)
 # 6 AB  集成学习 adaboost元算法
-[AB  集成学习 adaboost元算法](/6 adaboost)
+[AB  集成学习 adaboost元算法]("/6'\ 'adaboost")
 # 7 LiR 线性回归
 [LiR 线性回归](/7LInearRe)
 # 8 RT  树回归
