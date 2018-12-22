@@ -80,4 +80,6 @@
 ## TensoFLow 实战
 [学习TF实战](https://github.com/Ewenwan/Learn_TensorFLow)
 
+## Kaggle比赛相关代码
+[我的代码仓库](https://github.com/Ewenwan/Kaggle)
 
