@@ -75,7 +75,10 @@
 
 ## F SKL 集成学习库实战
 [SKL 集成学习库实战](/sklearn)
+
 [中文文档参考](https://github.com/Ewenwan/scikit-learn-doc-cn)
+
+[全球变暖: 预测未来3年气候-sklearn](http://blog.topspeedsnail.com/archives/10721)
 
 ## TensoFLow 实战
 [学习TF实战](https://github.com/Ewenwan/Learn_TensorFLow)
