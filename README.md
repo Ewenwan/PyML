@@ -86,3 +86,6 @@
 ## Kaggle比赛相关代码
 [我的代码仓库](https://github.com/Ewenwan/Kaggle)
 
+## scipy 
+[scipy-lecture-notes_cn Pytho科学计算生态介绍的中文翻译](https://github.com/Ewenwan/scipy-lecture-notes_cn)
+
