@@ -89,3 +89,6 @@
 ## scipy 
 [scipy-lecture-notes_cn Pytho科学计算生态介绍的中文翻译](https://github.com/Ewenwan/scipy-lecture-notes_cn)
 
+## Theano 
+[Theano 中文文档 0.9](https://www.ctolib.com/docs/sfile/theano-docs/index.html)
+
